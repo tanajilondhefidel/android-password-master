@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@+id/ScrollView"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+	<TableLayout
+		android:id="@+id/table"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+    	android:paddingLeft="20dp"
+    	android:paddingRight="20dp"
+    	android:paddingTop="5dp"
+    	android:paddingBottom="5dp"
+		android:orientation="vertical"
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:stretchColumns="1">
+		<TableRow
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+		    <TextView
+		        android:id="@+id/length_label"
+			    android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+			    android:text="@string/label_length" android:layout_marginRight="5dp"/>
+		    <EditText
+		        android:id="@+id/length"
+	           	android:layout_column="1"
+	           	android:inputType="numberSigned"
+		        android:layout_height="wrap_content"
+		        android:maxLength="4"
+			    android:layout_width="fill_parent"/>
+		</TableRow>
+		<TableRow
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:layout_marginTop="2dp">
+		    <TextView
+		        android:id="@+id/include_label"
+			    android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:text="@string/label_include" android:layout_marginRight="5dp"/>
+			<CheckBox android:id="@+id/checkbox1"
+		        android:layout_column="1"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:text="@string/checkbox_upper" />
+		</TableRow>
+		<TableRow
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+		    <TextView
+			    android:layout_width="fill_parent"
+		        android:layout_height="@id/checkbox1"
+		        android:text=""/>
+			<RelativeLayout
+		        android:layout_column="1"
+			    xmlns:android="http://schemas.android.com/apk/res/android"
+			    android:layout_width="fill_parent"
+		        android:layout_height="wrap_content">
+				<CheckBox android:id="@+id/checkbox2"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:text="@string/checkbox_lower" />
+				<CheckBox android:id="@+id/checkbox3"
+			        android:layout_below="@id/checkbox2"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:text="@string/checkbox_numbers" />
+				<CheckBox android:id="@+id/checkbox4"
+			        android:layout_below="@id/checkbox3"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:text="@string/checkbox_symbols" />
+			    <EditText
+			        android:layout_below="@id/checkbox4"
+			        android:id="@+id/include"
+			        android:layout_height="wrap_content"
+	           		android:inputType="textFilter|textNoSuggestions"
+        			android:maxLines="1"
+        			android:singleLine="true"
+			        android:layout_width="fill_parent"/>
+		    </RelativeLayout>
+		</TableRow>
+		<TableRow
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:layout_marginTop="2dp">
+		    <TextView
+		        android:id="@+id/exclude_label"
+			    android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+			    android:text="@string/label_exclude"
+			    android:layout_marginTop="4dp"
+			    android:layout_marginRight="5dp"/>
+		    <EditText
+		        android:id="@+id/exclude"
+	           	android:layout_column="1"
+	           	android:inputType="textFilter|textNoSuggestions"
+		        android:layout_height="wrap_content"
+        		android:maxLines="1"
+        		android:singleLine="true"
+			    android:layout_width="fill_parent"
+		        android:layout_marginTop="4dp"/>
+		</TableRow>
+	</TableLayout>
+</ScrollView>
